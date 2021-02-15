@@ -25,6 +25,9 @@
 		4D0E299E25DB2A3A0054870C /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E299D25DB2A3A0054870C /* UIView+Layout.swift */; };
 		4D0E29A325DB2D8C0054870C /* UIView+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29A225DB2D8C0054870C /* UIView+Factory.swift */; };
 		4D0E29A825DB30A30054870C /* UIView+Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29A725DB30A30054870C /* UIView+Indicator.swift */; };
+		4D0E29BC25DB329F0054870C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29BB25DB329F0054870C /* API.swift */; };
+		4D0E29C125DB33B40054870C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29C025DB33B40054870C /* APIClient.swift */; };
+		4D0E29C625DB36650054870C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29C525DB36650054870C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		4D0E299D25DB2A3A0054870C /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		4D0E29A225DB2D8C0054870C /* UIView+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Factory.swift"; sourceTree = "<group>"; };
 		4D0E29A725DB30A30054870C /* UIView+Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Indicator.swift"; sourceTree = "<group>"; };
+		4D0E29BB25DB329F0054870C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4D0E29C025DB33B40054870C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4D0E29C525DB36650054870C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,8 @@
 				4D0E295125DB0D920054870C /* HTTPConsumer.swift */,
 				4D0E295225DB0D920054870C /* JSONParser.swift */,
 				4D0E295B25DB0DE50054870C /* ErrorResponse.swift */,
+				4D0E29BB25DB329F0054870C /* API.swift */,
+				4D0E29C025DB33B40054870C /* APIClient.swift */,
 			);
 			name = Networking;
 			path = ../../marvelHeroes/Heroes/Networking;
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0E296125DB10840054870C /* CountryProvider.swift */,
+				4D0E29C525DB36650054870C /* User.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -332,8 +341,11 @@
 				4D0E295525DB0D920054870C /* AFConsumer.swift in Sources */,
 				4D0E296225DB10840054870C /* CountryProvider.swift in Sources */,
 				4D0E295425DB0D920054870C /* StorageAPI.swift in Sources */,
+				4D0E29C125DB33B40054870C /* APIClient.swift in Sources */,
 				4D0E295725DB0D920054870C /* JSONParser.swift in Sources */,
+				4D0E29BC25DB329F0054870C /* API.swift in Sources */,
 				4D0E291B25DB0BEE0054870C /* LoginViewController.swift in Sources */,
+				4D0E29C625DB36650054870C /* User.swift in Sources */,
 				4D0E295625DB0D920054870C /* HTTPConsumer.swift in Sources */,
 				4D0E29A825DB30A30054870C /* UIView+Indicator.swift in Sources */,
 				4D0E291725DB0BEE0054870C /* AppDelegate.swift in Sources */,
