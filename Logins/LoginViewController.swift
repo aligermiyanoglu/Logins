@@ -23,6 +23,12 @@ class LoginViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .white
         
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(gestureDidRecognize(_:)))
+        view.addGestureRecognizer(panGestureRecognizer)
+
+        let tapGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(gestureDidRecognize(_:)))
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
         let mailTextField = LayoutFactory.loginTextField(.emailAddress)
         let passwordTextField = LayoutFactory.loginTextField()
         passwordTextField.isSecureTextEntry = true
@@ -37,6 +43,12 @@ class LoginViewController: UIViewController {
         ])
         
         self.view = view
+    }
+    
+    @objc func gestureDidRecognize(_ gestureRecognizer: UIGestureRecognizer) {
+        guard gestureRecognizer.state == .ended else { return }
+        
+        self.view.endEditing(true)
     }
 }
 
