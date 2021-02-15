@@ -14,6 +14,6 @@ protocol AppRouterFlow {
 class AppRouter: AppRouterFlow {
 
     func initialViewController() -> UIViewController {
-        return ViewController(router: self)
+        return LoginViewController(router: self)
     }
 }
