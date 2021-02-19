@@ -7,8 +7,13 @@
 
 import Foundation
 
+struct LoginUser: Decodable {
+    let email: String
+    let country: Country
+}
+
 struct User: Decodable {
-    let id: String
+    let id: Int
     let name: String
     let username: String
     let email: String

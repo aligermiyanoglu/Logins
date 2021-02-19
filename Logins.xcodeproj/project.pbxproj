@@ -30,6 +30,9 @@
 		4D0E29C625DB36650054870C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E29C525DB36650054870C /* User.swift */; };
 		4D11490225DFAF2100ACB7AC /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11490125DFAF2100ACB7AC /* CountryListViewController.swift */; };
 		4D11490A25DFB35A00ACB7AC /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11490925DFB35A00ACB7AC /* CountryListViewModel.swift */; };
+		4D11491025DFB8B000ACB7AC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11490F25DFB8B000ACB7AC /* UserListViewController.swift */; };
+		4D11491525DFB8C800ACB7AC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */; };
+		4D11491A25DFB98000ACB7AC /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */; };
 		4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CB525DF849B003C8A52 /* String+Validation.swift */; };
 		4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */; };
 		4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CD725DF9298003C8A52 /* Observable.swift */; };
@@ -84,6 +87,9 @@
 		4D0E29C525DB36650054870C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D11490125DFAF2100ACB7AC /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		4D11490925DFB35A00ACB7AC /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		4D11490F25DFB8B000ACB7AC /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		4DC90CB525DF849B003C8A52 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4DC90CD725DF9298003C8A52 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 				4D0E291825DB0BEE0054870C /* SceneDelegate.swift */,
 				4DC90CE125DF976F003C8A52 /* Login */,
 				4D11490025DFAF0C00ACB7AC /* Country List */,
+				4D11490E25DFB89D00ACB7AC /* User List */,
 				4D0E298E25DB16A90054870C /* Routing */,
 				4D0E296025DB10760054870C /* Data */,
 				4D0E294F25DB0D920054870C /* Networking */,
@@ -223,6 +230,7 @@
 				4DC90CB525DF849B003C8A52 /* String+Validation.swift */,
 				4DC90CD725DF9298003C8A52 /* Observable.swift */,
 				4DC90CDC25DF93FA003C8A52 /* String+Localization.swift */,
+				4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,6 +242,15 @@
 				4D11490925DFB35A00ACB7AC /* CountryListViewModel.swift */,
 			);
 			path = "Country List";
+			sourceTree = "<group>";
+		};
+		4D11490E25DFB89D00ACB7AC /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				4D11490F25DFB8B000ACB7AC /* UserListViewController.swift */,
+				4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */,
+			);
+			path = "User List";
 			sourceTree = "<group>";
 		};
 		4DC90CE125DF976F003C8A52 /* Login */ = {
@@ -380,9 +397,11 @@
 				4D0E296225DB10840054870C /* CountryProvider.swift in Sources */,
 				4D0E295425DB0D920054870C /* StorageAPI.swift in Sources */,
 				4DC90CE625DF9782003C8A52 /* LoginView.swift in Sources */,
+				4D11491025DFB8B000ACB7AC /* UserListViewController.swift in Sources */,
 				4D0E29C125DB33B40054870C /* APIClient.swift in Sources */,
 				4D0E295725DB0D920054870C /* JSONParser.swift in Sources */,
 				4D0E29BC25DB329F0054870C /* API.swift in Sources */,
+				4D11491525DFB8C800ACB7AC /* UserListViewModel.swift in Sources */,
 				4D0E291B25DB0BEE0054870C /* LoginViewController.swift in Sources */,
 				4D11490A25DFB35A00ACB7AC /* CountryListViewModel.swift in Sources */,
 				4D0E29C625DB36650054870C /* User.swift in Sources */,
@@ -394,6 +413,7 @@
 				4D0E299025DB16B70054870C /* AppRouter.swift in Sources */,
 				4D0E29A325DB2D8C0054870C /* UIView+Factory.swift in Sources */,
 				4D0E299E25DB2A3A0054870C /* UIView+Layout.swift in Sources */,
+				4D11491A25DFB98000ACB7AC /* ErrorDisplayer.swift in Sources */,
 				4D0E295C25DB0DE60054870C /* ErrorResponse.swift in Sources */,
 				4D0E295325DB0D920054870C /* StorageHandler.swift in Sources */,
 				4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */,

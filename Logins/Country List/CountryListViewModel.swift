@@ -9,9 +9,9 @@ import Foundation
 
 final class CountryListViewModel {
     let user: User
-    let countryList: [String]
+    let countryList: [Country]
     
-    init(user: User, countryList: [String]) {
+    init(user: User, countryList: [Country]) {
         self.user = user
         self.countryList = countryList
     }

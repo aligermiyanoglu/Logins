@@ -7,8 +7,10 @@
 
 import Foundation
 
+typealias Country = String
+
 class CountryProvider {
-    static let countries: [String] = NSLocale.isoCountryCodes.compactMap  { code in
+    static let countries: [Country] = NSLocale.isoCountryCodes.compactMap  { code in
         let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
         let name = NSLocale(localeIdentifier: "en_UK").displayName(forKey: NSLocale.Key.identifier, value: id)
          

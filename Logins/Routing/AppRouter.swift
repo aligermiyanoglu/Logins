@@ -13,7 +13,7 @@ protocol AppRouterFlow {
     func showCountries(from viewController: LoginViewController, for user: User)
     
     func showInitialViewController(from viewController: UIViewController,
-                                   for user: User, country: String)
+                                   for user: LoginUser)
 }
 
 class AppRouter: AppRouterFlow, CountryListViewControllerDelegate {
@@ -31,19 +31,20 @@ class AppRouter: AppRouterFlow, CountryListViewControllerDelegate {
     }
     
     func showInitialViewController(from viewController: UIViewController,
-                                   for user: User, country: String) {
-        let userListViewController = UIViewController()
-        userListViewController.view.backgroundColor = .cyan
+                                   for user: LoginUser) {
+        let viewModel = UserListViewModel(user: user)
+        let userListViewController = UserListViewController(viewModel: viewModel)
+        let navigationViewController = UINavigationController(rootViewController: userListViewController)
         
-        viewController.present(userListViewController, animated: true, completion: nil)
+        viewController.present(navigationViewController, animated: true, completion: nil)
     }
     
     // MARK: CountryListViewControllerDelegate Methods
     
     func countryListViewController(_ viewController: CountryListViewController,
-                                   didSelect country: String,
+                                   didSelect country: Country,
                                    for user: User) {
-        showInitialViewController(from: viewController, for: user, country: country)
+        showInitialViewController(from: viewController, for: LoginUser(email: user.email, country: country))
     }
     
     

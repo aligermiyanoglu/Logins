@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ErrorDisplayer {
     private let router: AppRouterFlow
     
     private let viewModel: LoginViewModelProtocol
@@ -72,22 +72,15 @@ class LoginViewController: UIViewController {
     // MARK: Private Methods
 
     private func bindViewModel(to view: LoginView) {
-        viewModel.error.bind { [unowned self] (observation) in
+        viewModel.errorObservable.bind { [unowned self] (observation) in
             hideIndicator()
             
             guard let error = observation else { return }
 
-            let alertController = UIAlertController(title: "Error".localized,
-                                                    message: error.localizedDescription,
-                                                    preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK".localized,
-                                                    style: .default,
-                                                    handler: nil))
-
-            self.present(alertController, animated: true, completion: nil)
+            showError(error)
         }
         
-        viewModel.authorized.bind { [unowned self] (observation) in
+        viewModel.authorizedUserObservable.bind { [unowned self] (observation) in
             hideIndicator()
 
             guard let user = observation?.flatMap ({ $0 }) else { return }
@@ -95,7 +88,7 @@ class LoginViewController: UIViewController {
             self.router.showCountries(from: self, for: user)
         }
         
-        viewModel.loginEnabled.bind { (observation) in
+        viewModel.loginStateObservable.bind { (observation) in
             guard let enabled = observation else { return }
             
             view.loginButton.alpha = enabled ? 1.0 : 0.2
