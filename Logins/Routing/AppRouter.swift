@@ -14,6 +14,8 @@ protocol AppRouterFlow {
     
     func showInitialViewController(from viewController: UIViewController,
                                    for user: LoginUser)
+    
+    func showDetails(of user: User, from viewController: UserListViewController)
 }
 
 class AppRouter: AppRouterFlow, CountryListViewControllerDelegate {
@@ -33,10 +35,20 @@ class AppRouter: AppRouterFlow, CountryListViewControllerDelegate {
     func showInitialViewController(from viewController: UIViewController,
                                    for user: LoginUser) {
         let viewModel = UserListViewModel(user: user)
-        let userListViewController = UserListViewController(viewModel: viewModel)
+        let userListViewController = UserListViewController(viewModel: viewModel, router: self)
         let navigationViewController = UINavigationController(rootViewController: userListViewController)
         
         viewController.present(navigationViewController, animated: true, completion: nil)
+    }
+    
+    func showDetails(of user: User, from viewController: UserListViewController) {
+        guard let navigationController = viewController.navigationController else {
+            assert(false, "Layout validation error")
+        }
+        
+        let detailViewController = UserDetailViewController()
+        
+        navigationController.pushViewController(detailViewController, animated: true)
     }
     
     // MARK: CountryListViewControllerDelegate Methods

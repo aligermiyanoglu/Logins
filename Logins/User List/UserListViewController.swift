@@ -11,9 +11,11 @@ final class UserListViewController: UITableViewController {
     private static let basicCellIdentifier = "default"
 
     private let viewModel: UserListViewModel
+    private let router: AppRouterFlow
     
-    init(viewModel: UserListViewModel) {
+    init(viewModel: UserListViewModel, router: AppRouterFlow) {
         self.viewModel = viewModel
+        self.router = router
         
         super.init(nibName: nil, bundle: nil)
         
@@ -52,6 +54,10 @@ final class UserListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 
+        guard let user = viewModel.dataObservable.value?[indexPath.row] else { return }
+        
+        router.showDetails(of: user, from: self)
     }
 }

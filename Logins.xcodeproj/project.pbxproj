@@ -33,6 +33,7 @@
 		4D11491025DFB8B000ACB7AC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11490F25DFB8B000ACB7AC /* UserListViewController.swift */; };
 		4D11491525DFB8C800ACB7AC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */; };
 		4D11491A25DFB98000ACB7AC /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */; };
+		4D11492025DFC4DD00ACB7AC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */; };
 		4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CB525DF849B003C8A52 /* String+Validation.swift */; };
 		4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */; };
 		4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CD725DF9298003C8A52 /* Observable.swift */; };
@@ -90,6 +91,7 @@
 		4D11490F25DFB8B000ACB7AC /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
+		4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		4DC90CB525DF849B003C8A52 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4DC90CD725DF9298003C8A52 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				4DC90CE125DF976F003C8A52 /* Login */,
 				4D11490025DFAF0C00ACB7AC /* Country List */,
 				4D11490E25DFB89D00ACB7AC /* User List */,
+				4D11491E25DFC4C100ACB7AC /* User Details */,
 				4D0E298E25DB16A90054870C /* Routing */,
 				4D0E296025DB10760054870C /* Data */,
 				4D0E294F25DB0D920054870C /* Networking */,
@@ -251,6 +254,14 @@
 				4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */,
 			);
 			path = "User List";
+			sourceTree = "<group>";
+		};
+		4D11491E25DFC4C100ACB7AC /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */,
+			);
+			path = "User Details";
 			sourceTree = "<group>";
 		};
 		4DC90CE125DF976F003C8A52 /* Login */ = {
@@ -406,6 +417,7 @@
 				4D11490A25DFB35A00ACB7AC /* CountryListViewModel.swift in Sources */,
 				4D0E29C625DB36650054870C /* User.swift in Sources */,
 				4D0E295625DB0D920054870C /* HTTPConsumer.swift in Sources */,
+				4D11492025DFC4DD00ACB7AC /* UserDetailViewController.swift in Sources */,
 				4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */,
 				4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */,
 				4D0E29A825DB30A30054870C /* UIView+Indicator.swift in Sources */,
