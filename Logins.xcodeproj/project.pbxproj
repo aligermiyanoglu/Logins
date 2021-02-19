@@ -37,6 +37,7 @@
 		4D11492825DFC5AA00ACB7AC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11492725DFC5AA00ACB7AC /* Address.swift */; };
 		4D11492D25DFC70F00ACB7AC /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11492C25DFC70F00ACB7AC /* UserDetailView.swift */; };
 		4D11493525DFE8DB00ACB7AC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4D11493425DFE8DB00ACB7AC /* SQLite */; };
+		4D11493A25DFE9DD00ACB7AC /* SQLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11493925DFE9DD00ACB7AC /* SQLHandler.swift */; };
 		4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CB525DF849B003C8A52 /* String+Validation.swift */; };
 		4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */; };
 		4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CD725DF9298003C8A52 /* Observable.swift */; };
@@ -97,6 +98,7 @@
 		4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		4D11492725DFC5AA00ACB7AC /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4D11492C25DFC70F00ACB7AC /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		4D11493925DFE9DD00ACB7AC /* SQLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHandler.swift; sourceTree = "<group>"; };
 		4DC90CB525DF849B003C8A52 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4DC90CD725DF9298003C8A52 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				4D0E294D25DB0D920054870C /* StorageHandler.swift */,
 				4D0E294E25DB0D920054870C /* StorageAPI.swift */,
+				4D11493925DFE9DD00ACB7AC /* SQLHandler.swift */,
 			);
 			name = Persistance;
 			path = ../../marvelHeroes/Heroes/Persistance;
@@ -447,6 +450,7 @@
 				4D0E291925DB0BEE0054870C /* SceneDelegate.swift in Sources */,
 				4D11492D25DFC70F00ACB7AC /* UserDetailView.swift in Sources */,
 				4D11490225DFAF2100ACB7AC /* CountryListViewController.swift in Sources */,
+				4D11493A25DFE9DD00ACB7AC /* SQLHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

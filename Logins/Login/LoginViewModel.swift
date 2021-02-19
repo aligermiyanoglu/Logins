@@ -17,18 +17,45 @@ protocol LoginViewModelProtocol: ErrorModel {
 }
 
 final class LoginViewModel: LoginViewModelProtocol {
+    enum LoginError: String, LocalizedError {
+        case hint
+        
+        var errorDescription: String? {
+            switch self {
+            case .hint:
+                return "Hint: Try 'backdoor' as password".localized
+            }
+        }
+    }
     
     private(set) var errorObservable: Observable<Error> = Observable(nil)
     private(set) var loginStateObservable: Observable<Bool> = Observable(false)
     private(set) var authorizedUserObservable: Observable<User?> = Observable(nil)
+    private let userStorage: StorageAPI
+    
+    init(userStorage: StorageAPI = StorageHandler()) {
+        self.userStorage = userStorage
+    }
     
     func login(mail: String, password: String) {
-        let address = Address(street: "", geo: Geo(lat: "", lng: ""), city: "", zipcode: "", suite: "")
-        authorizedUserObservable.value = User(id: 1,
-                                              name: "",
-                                              username: "",
-                                              email: "",
-                                              address: address)
+        userStorage.validate(for: UserCrededentials(email: mail, password: password)) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(true):
+                    let address = Address(street: "", geo: Geo(lat: "", lng: ""), city: "", zipcode: "", suite: "")
+                    self.authorizedUserObservable.value = User(id: 1,
+                                                               name: "",
+                                                               username: "",
+                                                               email: "",
+                                                               address: address)
+                case .success:
+                    self.errorObservable.value = LoginError.hint
+                case .failure(let error):
+                    self.errorObservable.value = error
+        
+                }
+            }
+        }
     }
     
     func validate(mail: String?, password: String?) {
@@ -47,3 +74,4 @@ final class LoginViewModel: LoginViewModelProtocol {
         loginStateObservable.value = validate()
     }
 }
+

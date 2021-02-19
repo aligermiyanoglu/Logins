@@ -26,8 +26,9 @@ protocol ErrorDisplayer {
 
 extension ErrorDisplayer where Self: UIViewController {
     func showError(_ error: Error) {
+        let message = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
         let alertController = UIAlertController(title: "Error".localized,
-                                                message: error.localizedDescription,
+                                                message: message,
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK".localized,
                                                 style: .default,

@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct UserCrededentials {
+    let email: String
+    let password: String
+}
+
 struct LoginUser: Decodable {
     let email: String
     let country: Country
