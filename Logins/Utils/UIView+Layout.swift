@@ -66,6 +66,12 @@ extension UIView {
         return subview.widthAnchor.constraint(equalTo: widthAnchor, multiplier: multiplier)
     }
     
+    func heightConstraintSubview(_ subview: UIView, multiplier: CGFloat) -> NSLayoutConstraint {
+        addSubview(subview)
+        
+        return subview.heightAnchor.constraint(equalTo: heightAnchor, multiplier: multiplier)
+    }
+    
     func centeredXSubview(_ subview: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
         addSubview(subview)
         
