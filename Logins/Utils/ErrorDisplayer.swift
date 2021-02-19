@@ -7,8 +7,17 @@
 
 import UIKit
 
+typealias FetchResultViewModel = ErrorModel & DataFetchModel
+
 protocol ErrorModel {
     var errorObservable: Observable<Error> { get }
+}
+
+protocol DataFetchModel {
+    associatedtype Data
+
+    var dataObservable: Observable<Data> { get }
+    func fetch()
 }
 
 protocol ErrorDisplayer {

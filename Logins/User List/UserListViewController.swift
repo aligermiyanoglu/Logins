@@ -10,9 +10,9 @@ import UIKit
 final class UserListViewController: UITableViewController {
     private static let basicCellIdentifier = "default"
 
-    private let viewModel: UserListViewModelProtocol
+    private let viewModel: UserListViewModel
     
-    init(viewModel: UserListViewModelProtocol) {
+    init(viewModel: UserListViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
@@ -27,26 +27,26 @@ final class UserListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.userListObservable.bind { [weak self] (_) in
+        viewModel.dataObservable.bind { [weak self] (_) in
             self?.hideIndicator()
             self?.tableView.reloadData()
         }
         
         showIndicator()
-        viewModel.fetchUsers()
+        viewModel.fetch()
     }
     
     // MARK: TableView Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.userListObservable.value?.count ?? 0
+        viewModel.dataObservable.value?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserListViewController.basicCellIdentifier,
                                                  for: indexPath)
 
-        cell.textLabel?.text = viewModel.userListObservable.value?[indexPath.row].name
+        cell.textLabel?.text = viewModel.dataObservable.value?[indexPath.row].name
         
         return cell
     }

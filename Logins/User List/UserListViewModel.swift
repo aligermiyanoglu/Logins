@@ -7,16 +7,9 @@
 
 import Foundation
 
-protocol UserListViewModelProtocol: ErrorModel {
-    typealias UserListCompletion = (_ users: [User]) -> Void
-    var userListObservable: Observable<[User]> { get }
-    
-    func fetchUsers()
-}
-
-final class UserListViewModel: UserListViewModelProtocol {
+final class UserListViewModel: FetchResultViewModel {
     private(set) var errorObservable: Observable<Error> = .init(nil)
-    private(set) var userListObservable: Observable<[User]> = .init(nil)
+    private(set) var dataObservable: Observable<[User]> = .init(nil)
     
     private let service: APIService
     
@@ -24,11 +17,11 @@ final class UserListViewModel: UserListViewModelProtocol {
         self.service = service
     }
     
-    func fetchUsers() {
+    func fetch() {
         service.fetchUsers { [weak self] (users, error) in
             DispatchQueue.main.async {
                 self?.errorObservable.value = error
-                self?.userListObservable.value = users
+                self?.dataObservable.value = users
             }
         }
     }
