@@ -10,7 +10,7 @@ import Foundation
 protocol LoginViewModelProtocol {
     var error: Observable<Error> { get }
     var loginEnabled: Observable<Bool> { get }
-    var authorized: Observable<Bool> { get }
+    var authorized: Observable<User?> { get }
     
     func login(mail: String, password: String)
     
@@ -21,10 +21,10 @@ final class LoginViewModel: LoginViewModelProtocol {
     
     private(set) var error: Observable<Error> = Observable(nil)
     private(set) var loginEnabled: Observable<Bool> = Observable(false)
-    private(set) var authorized: Observable<Bool> = Observable(false)
+    private(set) var authorized: Observable<User?> = Observable(nil)
     
     func login(mail: String, password: String) {
-        authorized.value = true
+        authorized.value = User(id: "", name: "", username: "", email: "")
     }
     
     func inputValidation(mail: String?, password: String?) {

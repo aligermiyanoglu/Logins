@@ -90,9 +90,9 @@ class LoginViewController: UIViewController {
         viewModel.authorized.bind { [unowned self] (observation) in
             hideIndicator()
 
-            guard let value = observation, value else { return }
-            
-            self.router.login(from: self)
+            guard let user = observation?.flatMap ({ $0 }) else { return }
+
+            self.router.showCountries(from: self, for: user)
         }
         
         viewModel.loginEnabled.bind { (observation) in
