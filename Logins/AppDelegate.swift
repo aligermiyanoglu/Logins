@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let window: UIWindow = {
                 let window = UIWindow(frame: UIScreen.main.bounds)
                 
-                let heroListVC = router.initialViewController()
-                window.rootViewController = heroListVC
+                let initialViewController = router.initialViewController()
+                window.rootViewController = initialViewController
                 window.makeKeyAndVisible()
                 
                 return window

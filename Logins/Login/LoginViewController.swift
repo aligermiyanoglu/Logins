@@ -66,7 +66,7 @@ class LoginViewController: UIViewController, ErrorDisplayer {
     }
     
     @objc func textFieldContentChange(_ sender: Any) {
-        viewModel.inputValidation(mail: loginView?.mailTextField.text, password: loginView?.passwordTextField.text)
+        viewModel.validate(mail: loginView?.mailTextField.text, password: loginView?.passwordTextField.text)
     }
     
     // MARK: Private Methods

@@ -13,7 +13,7 @@ protocol LoginViewModelProtocol: ErrorModel {
     
     func login(mail: String, password: String)
     
-    func inputValidation(mail: String?, password: String?)
+    func validate(mail: String?, password: String?)
 }
 
 final class LoginViewModel: LoginViewModelProtocol {
@@ -31,7 +31,7 @@ final class LoginViewModel: LoginViewModelProtocol {
                                               address: address)
     }
     
-    func inputValidation(mail: String?, password: String?) {
+    func validate(mail: String?, password: String?) {
         func validate() -> Bool {
             guard let mailText = mail, mailText.isEmpty == false else {
                 return false
