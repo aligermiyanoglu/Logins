@@ -46,7 +46,7 @@ class AppRouter: AppRouterFlow, CountryListViewControllerDelegate {
             assert(false, "Layout validation error")
         }
         
-        let detailViewController = UserDetailViewController()
+        let detailViewController = UserDetailViewController(user: user)
         
         navigationController.pushViewController(detailViewController, animated: true)
     }

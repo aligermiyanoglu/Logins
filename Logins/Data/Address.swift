@@ -20,6 +20,6 @@ struct Address: Decodable {
 }
 
 struct Geo: Decodable {
-    let lat: Double
-    let lng: Double
+    let lat: String
+    let lng: String
 }

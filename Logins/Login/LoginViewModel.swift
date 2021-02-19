@@ -23,7 +23,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     private(set) var authorizedUserObservable: Observable<User?> = Observable(nil)
     
     func login(mail: String, password: String) {
-        let address = Address(street: "", geo: Geo(lat: 2, lng: 1), city: "", zipcode: "", suite: "")
+        let address = Address(street: "", geo: Geo(lat: "", lng: ""), city: "", zipcode: "", suite: "")
         authorizedUserObservable.value = User(id: 1,
                                               name: "",
                                               username: "",
