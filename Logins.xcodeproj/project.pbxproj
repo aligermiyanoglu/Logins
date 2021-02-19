@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,7 @@
 		4D11492025DFC4DD00ACB7AC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */; };
 		4D11492825DFC5AA00ACB7AC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11492725DFC5AA00ACB7AC /* Address.swift */; };
 		4D11492D25DFC70F00ACB7AC /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11492C25DFC70F00ACB7AC /* UserDetailView.swift */; };
+		4D11493525DFE8DB00ACB7AC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4D11493425DFE8DB00ACB7AC /* SQLite */; };
 		4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CB525DF849B003C8A52 /* String+Validation.swift */; };
 		4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */; };
 		4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CD725DF9298003C8A52 /* Observable.swift */; };
@@ -108,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D11493525DFE8DB00ACB7AC /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +298,9 @@
 			dependencies = (
 			);
 			name = Logins;
+			packageProductDependencies = (
+				4D11493425DFE8DB00ACB7AC /* SQLite */,
+			);
 			productName = Logins;
 			productReference = 4D0E291325DB0BEE0054870C /* Logins.app */;
 			productType = "com.apple.product-type.application";
@@ -367,6 +372,9 @@
 				Base,
 			);
 			mainGroup = 4D0E290A25DB0BED0054870C;
+			packageReferences = (
+				4D11493325DFE8DB00ACB7AC /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 4D0E291425DB0BEE0054870C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -763,6 +771,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D11493325DFE8DB00ACB7AC /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D11493425DFE8DB00ACB7AC /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D11493325DFE8DB00ACB7AC /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D0E290B25DB0BED0054870C /* Project object */;
 }
