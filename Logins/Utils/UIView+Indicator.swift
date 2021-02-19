@@ -91,6 +91,8 @@ extension UIViewController: IndicatorProtocol {
     }
     
     public func hideIndicator() {
+        guard isViewLoaded else { return }
+
         view.hideIndicator()
     }
 }
