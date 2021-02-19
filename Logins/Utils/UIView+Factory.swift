@@ -24,8 +24,8 @@ extension UIView {
 
 final class LayoutFactory {
     static func loginTextField(_ type: UIKeyboardType = .default) -> UITextField {
-        let textfield: UITextField = UITextField.view()
-        textfield.backgroundColor = .lightGray
+        let textfield: UITextField = UITextField.view(roundedCorners: 8)
+        textfield.backgroundColor = UIColor.lightGray.withAlphaComponent(0.8)
         textfield.keyboardType = type
         
         return textfield
