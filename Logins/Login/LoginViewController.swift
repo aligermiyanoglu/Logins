@@ -66,13 +66,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func textFieldContentChange(_ sender: Any) {
-        guard let mailTextField = loginView?.mailTextField, let passwordTextField = loginView?.passwordTextField else {
-            assert(false, "fix me")
-        }
-
-        viewModel.loginEnabled.value = mailTextField.text?.isEmpty == false &&
-            StringValidator().isValid(email: mailTextField.text ?? "") &&
-            passwordTextField.text?.isEmpty == false
+        viewModel.inputValidation(mail: loginView?.mailTextField.text, password: loginView?.passwordTextField.text)
     }
     
     // MARK: Private Methods

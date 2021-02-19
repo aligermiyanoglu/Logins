@@ -13,6 +13,8 @@ protocol LoginViewModelProtocol {
     var authorized: Observable<Bool> { get }
     
     func login(mail: String, password: String)
+    
+    func inputValidation(mail: String?, password: String?)
 }
 
 final class LoginViewModel: LoginViewModelProtocol {
@@ -23,5 +25,21 @@ final class LoginViewModel: LoginViewModelProtocol {
     
     func login(mail: String, password: String) {
         authorized.value = true
+    }
+    
+    func inputValidation(mail: String?, password: String?) {
+        func validate() -> Bool {
+            guard let mailText = mail, mailText.isEmpty == false else {
+                return false
+            }
+            
+            guard let passwordText = password, passwordText.isEmpty == false else {
+                return false
+            }
+            
+            return StringValidator().isValid(email: mailText)
+        }
+        
+        loginEnabled.value = validate()
     }
 }
