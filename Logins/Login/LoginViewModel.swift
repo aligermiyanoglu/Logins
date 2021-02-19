@@ -23,7 +23,12 @@ final class LoginViewModel: LoginViewModelProtocol {
     private(set) var authorizedUserObservable: Observable<User?> = Observable(nil)
     
     func login(mail: String, password: String) {
-        authorizedUserObservable.value = User(id: 1, name: "", username: "", email: "")
+        let address = Address(street: "", geo: Geo(lat: 2, lng: 1), city: "", zipcode: "", suite: "")
+        authorizedUserObservable.value = User(id: 1,
+                                              name: "",
+                                              username: "",
+                                              email: "",
+                                              address: address)
     }
     
     func inputValidation(mail: String?, password: String?) {

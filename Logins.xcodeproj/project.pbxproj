@@ -34,6 +34,7 @@
 		4D11491525DFB8C800ACB7AC /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */; };
 		4D11491A25DFB98000ACB7AC /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */; };
 		4D11492025DFC4DD00ACB7AC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */; };
+		4D11492825DFC5AA00ACB7AC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11492725DFC5AA00ACB7AC /* Address.swift */; };
 		4DC90CB625DF849B003C8A52 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CB525DF849B003C8A52 /* String+Validation.swift */; };
 		4DC90CBB25DF8508003C8A52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */; };
 		4DC90CD825DF9298003C8A52 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC90CD725DF9298003C8A52 /* Observable.swift */; };
@@ -92,6 +93,7 @@
 		4D11491425DFB8C800ACB7AC /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		4D11491925DFB98000ACB7AC /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		4D11491F25DFC4DD00ACB7AC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		4D11492725DFC5AA00ACB7AC /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4DC90CB525DF849B003C8A52 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		4DC90CBA25DF8508003C8A52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4DC90CD725DF9298003C8A52 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				4D0E296125DB10840054870C /* CountryProvider.swift */,
 				4D0E29C525DB36650054870C /* User.swift */,
+				4D11492725DFC5AA00ACB7AC /* Address.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				4D0E29C125DB33B40054870C /* APIClient.swift in Sources */,
 				4D0E295725DB0D920054870C /* JSONParser.swift in Sources */,
 				4D0E29BC25DB329F0054870C /* API.swift in Sources */,
+				4D11492825DFC5AA00ACB7AC /* Address.swift in Sources */,
 				4D11491525DFB8C800ACB7AC /* UserListViewModel.swift in Sources */,
 				4D0E291B25DB0BEE0054870C /* LoginViewController.swift in Sources */,
 				4D11490A25DFB35A00ACB7AC /* CountryListViewModel.swift in Sources */,
